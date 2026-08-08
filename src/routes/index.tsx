@@ -404,6 +404,210 @@ function Index() {
         </motion.div>
       </Section>
 
+      {/* 5. How It Works - 4 Step Platform */}
+      <Section media={<Img src={s4Asset.url} alt="Mining operation workflow" />}>
+        <motion.div {...rise} className="glass-card mx-auto w-full max-w-5xl rounded-3xl p-8 sm:p-12">
+          <span className="text-xs uppercase tracking-[0.3em] text-primary">The Methodology</span>
+          <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold leading-tight sm:text-5xl">
+            Four Steps to Physical AI.
+          </h2>
+          <p className="mt-4 text-base text-muted-foreground">
+            From data capture to autonomous response—here's how the platform works:
+          </p>
+          <div className="mt-12 space-y-8">
+            {[
+              {
+                num: "01",
+                title: "Capture",
+                description:
+                  "Drones autonomously patrol mining sites, capturing thermal imaging, video feeds, and sensor data in real-time.",
+              },
+              {
+                num: "02",
+                title: "Understand",
+                description:
+                  "AI agents analyze every frame. Leak detection, thermal anomalies, and stockpile changes surface instantly.",
+              },
+              {
+                num: "03",
+                title: "Alert",
+                description:
+                  "The moment a finding surfaces, alerts route directly to your maintenance team via the systems you already use.",
+              },
+              {
+                num: "04",
+                title: "Learn",
+                description:
+                  "Every detection trains the platform. False positives drop. Accuracy climbs. The system adapts to your site.",
+              },
+            ].map((step) => (
+              <div
+                key={step.num}
+                className="flex gap-6 rounded-2xl border border-border bg-card/30 p-6 sm:p-8"
+              >
+                <div className="flex-shrink-0">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-primary/20 text-2xl font-bold text-primary">
+                    {step.num}
+                  </div>
+                </div>
+                <div className="flex-grow">
+                  <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 text-base text-muted-foreground">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </Section>
+
+      {/* 5.5 Use Cases */}
+      <Section media={<Img src={s2Asset.url} alt="Mining site operations" />}>
+        <motion.div {...rise} className="glass-card mx-auto w-full max-w-5xl rounded-3xl p-8 sm:p-12">
+          <span className="text-xs uppercase tracking-[0.3em] text-accent">Real-World Impact</span>
+          <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold leading-tight sm:text-5xl">
+            Mining Use Cases Transformed.
+          </h2>
+          <p className="mt-4 text-base text-muted-foreground">
+            Physical AI solves the hardest problems at scale:
+          </p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {[
+              {
+                icon: "🌡️",
+                title: "Thermal Leak Detection",
+                description: "Spot temperature anomalies across leaching pads in seconds, not days.",
+              },
+              {
+                icon: "📦",
+                title: "Stockpile Monitoring",
+                description: "Real-time volumetric tracking of ore, waste, and finished product.",
+              },
+              {
+                icon: "🔒",
+                title: "Perimeter Security",
+                description: "24/7 autonomous monitoring detects intrusions before they become incidents.",
+              },
+              {
+                icon: "🎯",
+                title: "Asset Tracking",
+                description: "Know the location and status of haul trucks, dozers, and critical equipment.",
+              },
+              {
+                icon: "⚠️",
+                title: "Environmental Compliance",
+                description: "Continuous monitoring ensures tailings dams and retention ponds stay safe.",
+              },
+              {
+                icon: "🚀",
+                title: "Yield Optimization",
+                description: "Data-driven insights unlock 4x production increases like at SQM.",
+              },
+            ].map((useCase) => (
+              <div
+                key={useCase.title}
+                className="rounded-2xl border border-border bg-card/50 p-6 transition-all hover:border-primary/50 hover:bg-card/80"
+              >
+                <div className="text-3xl">{useCase.icon}</div>
+                <h3 className="mt-4 font-[family-name:var(--font-display)] text-lg font-semibold">
+                  {useCase.title}
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground">{useCase.description}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </Section>
+
+      {/* 6. FAQ Section */}
+      <Section media={<Img src={s3Asset.url} alt="FAQ section" />}>
+        <motion.div {...rise} className="glass-card mx-auto w-full max-w-4xl rounded-3xl p-8 sm:p-12">
+          <span className="text-xs uppercase tracking-[0.3em] text-primary">Questions & Answers</span>
+          <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold leading-tight sm:text-4xl">
+            Mining Leaders Ask.
+          </h2>
+          <p className="mt-4 text-base text-muted-foreground">
+            Here&apos;s what we hear most often:
+          </p>
+          <div className="mt-10 space-y-4">
+            {[
+              {
+                q: "How fast can drones be deployed at a new site?",
+                a: "FlytBase drones are operational within 24 hours. The dock handles power, maintenance, and weather—your team focuses on operations.",
+              },
+              {
+                q: "What happens if a leak is detected at 3 AM?",
+                a: "The drone autonomously redeploys to verify and capture richer intelligence. Alerts route to on-call teams in real-time. No delays.",
+              },
+              {
+                q: "Does this replace human inspectors?",
+                a: "No. It augments them. Inspectors focus on root cause; drones handle the repetitive surveillance, 24/7 at a fraction of the cost.",
+              },
+              {
+                q: "Is the data compliant with mining regulations?",
+                a: "Yes. All data is encrypted, logged, and audit-ready. We support NDAA compliance, sovereignty requirements, and enterprise IT policies.",
+              },
+              {
+                q: "Can it integrate with SAP, Maximo, or our existing tools?",
+                a: "Yes. FlytBase connects to 40+ enterprise systems including SAP, Maximo, Genetec, and Milestone via standard APIs.",
+              },
+            ].map((item, idx) => (
+              <details
+                key={idx}
+                className="group rounded-2xl border border-border bg-card/30 transition-all hover:bg-card/50"
+              >
+                <summary className="flex cursor-pointer items-center gap-4 p-6 font-semibold">
+                  <span className="text-lg font-bold text-primary group-open:hidden">+</span>
+                  <span className="hidden text-lg font-bold text-primary group-open:inline">−</span>
+                  {item.q}
+                </summary>
+                <div className="border-t border-border bg-card/20 px-6 py-4 text-muted-foreground">
+                  {item.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </motion.div>
+      </Section>
+
+      {/* 7. Newsletter Signup */}
+      <div className="relative overflow-hidden bg-gradient-to-b from-background to-background/50 py-20">
+        <div className="mx-auto max-w-2xl px-6 text-center md:px-14 lg:px-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <span className="text-xs font-medium uppercase tracking-[0.4em] text-primary">
+              Stay Updated
+            </span>
+            <h2 className="mt-6 font-[family-name:var(--font-display)] text-3xl font-bold leading-tight sm:text-5xl">
+              Get Mining Insights Delivered.
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
+              Monthly briefings on drone autonomy advancements, customer wins, and ROI playbooks from
+              the field. No spam—unsubscribe anytime.
+            </p>
+            <form className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
+              <input
+                type="email"
+                placeholder="your@miningcompany.com"
+                className="rounded-full border border-border bg-card/50 px-6 py-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none sm:min-w-80"
+                required
+              />
+              <button
+                type="submit"
+                className="glow-cta rounded-full bg-primary px-8 py-3 font-semibold text-primary-foreground transition-all hover:shadow-[0_0_40px_rgba(249,115,22,0.6)]"
+              >
+                Subscribe
+              </button>
+            </form>
+          </motion.div>
+        </div>
+      </div>
+
       {/* 5. CTA */}
       <Section media={<Img src={s5Asset.url} alt="Dark brushed metal surface with light flares" />}>
         <motion.div {...rise} className="mx-auto max-w-3xl text-center">
