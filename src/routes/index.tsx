@@ -3,12 +3,12 @@ import { animate, motion, useInView, useMotionValue, useScroll, useTransform } f
 import { Radar, Flame, ClipboardCheck } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
+import { FrameScrollyteller } from "@/components/FrameScrollyteller";
 import heroAsset from "@/assets/mining.webp.asset.json";
 import s2Asset from "@/assets/Section_2.webp.asset.json";
 import s3Asset from "@/assets/Section_3.webp.asset.json";
 import s4Asset from "@/assets/Section_4.webp.asset.json";
 import s5Asset from "@/assets/Section_5.webp.asset.json";
-import videoAsset from "@/assets/Industrial_Video.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -197,11 +197,9 @@ function Index() {
   return (
     <main className="bg-background text-foreground">
       <MissionProgressTracker />
-      {/* 1. Hero */}
-      <Section
-        media={<Img src={heroAsset.url} alt="Aerial view of a vast open-pit mine with haul trucks" />}
-      >
-        <motion.div {...rise} className="mx-auto max-w-3xl text-center">
+      {/* 1. Hero - Frame Scrollyteller */}
+      <FrameScrollyteller containerHeight="500vh">
+        <div className="mx-auto max-w-3xl text-center">
           <span className="text-xs font-medium uppercase tracking-[0.4em] text-primary">
             Physical AI for Mining
           </span>
@@ -214,8 +212,8 @@ function Index() {
           <div className="mt-14 flex justify-center">
             <span className="h-14 w-px animate-pulse bg-gradient-to-b from-primary to-transparent" />
           </div>
-        </motion.div>
-      </Section>
+        </div>
+      </FrameScrollyteller>
 
       {/* 2. The Friction */}
       <Section
@@ -241,17 +239,7 @@ function Index() {
       {/* 3. The Shift */}
       <Section
         align="right"
-        media={
-          <video
-            className="h-full w-full object-cover"
-            src={videoAsset.url}
-            poster={s3Asset.url}
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-        }
+        media={<Img src={s3Asset.url} alt="Drone flying through industrial facility" />}
       >
         <motion.div
           {...rise}
